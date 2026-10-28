@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0e14">
+  <meta name="description" content="ACG Radar - 基于 Bangumi 评论抓取与自有 AI API 的分析工具">
+  <title>ACG Radar · 次元雷达</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div class="ambient"></div>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="#/discover" aria-label="ACG Radar 首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="32" height="32" fill="none">
+            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2" opacity=".45"/>
+            <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2" opacity=".75"/>
+            <circle cx="24" cy="24" r="3" fill="currentColor"/>
+            <path d="M24 24 L38 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="38" cy="12" r="2.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text"><strong>ACG Radar</strong><small>次元雷达</small></span>
+      </a>
+      <nav class="nav" id="main-nav" aria-label="主导航">
+        <a href="#/discover" data-route="discover">发现</a>
+        <a href="#/chat" data-route="chat">对话</a>
+        <a href="#/jobs" data-route="jobs">任务<span class="nav-badge" id="job-badge" hidden>0</span></a>
+        <a href="#/settings" data-route="settings">设置</a>
+      </nav>
+      <div class="top-actions">
+        <button class="btn btn-ghost btn-sm" id="demo-pill" hidden>演示数据</button>
+        <button class="btn btn-primary btn-sm" id="add-work-btn"><span aria-hidden="true">＋</span> 添加作品</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="shell" tabindex="-1">
+    <div class="boot-screen" id="boot-screen">
+      <div class="radar-loader" aria-hidden="true"><span></span></div>
+      <p>正在校准雷达…</p>
+    </div>
+  </main>
+
+  <footer class="footer shell">
+    <span>评论来自公开 API，仅本地个人使用；引用保留原站链接。</span>
+    <span id="footer-version"></span>
+  </footer>
+
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="false"></div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
